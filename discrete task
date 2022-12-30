@@ -1,0 +1,51 @@
+using System.Diagnostics;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        
+
+        Console.WriteLine("Enter the first number");
+        int N1 = int.Parse(Console.ReadLine());
+
+
+        Console.WriteLine("Enter the Second number");
+         int N2= int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Perfect numbers from " + N1 + " to " + N2 + " are : " );
+
+
+        
+        for (int i = N1; i <= N2; i++)
+        {
+            if (PerfectNumber(i))
+
+            {
+                Console.WriteLine(i);
+            }
+            
+
+
+            
+        }
+
+
+    }
+    static bool PerfectNumber(int N )
+    {
+        int sum = 0;
+        for (int i=1; i<N; i++)
+        {
+            if (N%i == 0)
+            {
+                sum += i;
+            }
+
+        }
+        return sum == N;
+
+    }
+
+
+}
